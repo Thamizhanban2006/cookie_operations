@@ -20,4 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // 4. Display the count on the webpage
 
   // your code here
+
+  function increaseCount() {
+    let count = getCookie("Count");
+    count = count ? parseInt(count) + 1 : 1;
+    setCookie("Count", count, 7)
+    document.getElementById("count").textContent = count;
+}
+
+increaseCount();
+
 });
